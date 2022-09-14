@@ -30,35 +30,24 @@ header h1{
     font-size:35px;
 }
 
-/* FIRST LAYOUT */
+/* LAYOUT */
 
-.main-layout{
+.layout{
     width: 80%;
     margin: auto;
-    height: 60px;
-    margin-top: 30px;
     background-color: white;
+    padding: 2%;
 }
 
-#blue-button{
-    display: inline-block;
-    background-color: rgb(71, 173, 241);
-    padding: 5px;
-    color: white;
-    border-radius: 8px;
-    width: 7%;
-    text-align: center;   
+.top{
+    margin-top: 30px;
+}
+
+.bottom{
+    margin-top: 2px;
 }
 
 /* BUTTON BLUE AND TRASPARENT */
-
-#trasparent-button{
-   display: inline-block;
-   padding: 5px;
-   color: rgb(229, 231, 234);
-   border: 1px solid rgb(229, 231, 234);
-   border-radius: 8px;
-}
 
 .button-position{
     height: 60px;
@@ -66,41 +55,24 @@ header h1{
     margin-left: 35px; 
 }
 
-.layout2{
-    width: 80%;
-    margin: auto;
-    margin-top: 2px;
-    background-color: white;
-    padding: 2%;
+.button{
+    display: inline-block;
+    padding: 5px 2px;
+    border-radius: 8px;
+}
+
+.blue{
+    background-color: rgb(71, 173, 241);
+    color: white;
+    border: none;
+}
+
+.trasparent{
+   color: white;
+   border: 1px solid rgb(229, 231, 234);
 }
 
 /* START UNORDERED LIST */
-
-.icon-down{
-    font-size: 20px;
-}
-
-.icon-down:before {
-    content: "\25BC";
-    font-size: 14px;
-}
-
-.right-check{
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgb(131, 207, 191);
-    margin-top: 15px;
-    border-radius: 50%;
-    color: rgb(131, 207, 191);
-    line-height: middle;
-    display: inline-block;
-    line-height: 15px;
-}
-
-.item-check{
-    font-size: 13px;
-    margin-left: 3px;
-}
 
 ul{
     margin-top: 3%;
@@ -108,88 +80,81 @@ ul{
 
 li{
     font-size: 18px;
+    line-height: 30px;
 }
 
-.editorial{
-    display: inline-block;
-    background-color: rgb(71, 173, 241);
-    padding: 2px;
-    color: white;
-    border-radius: 9px;
-    width: 5%;
-    text-align: center;   
-    line-height: 22px;
-    font-size: 13px;
-}
-
-.Q1-goals{
-    display: inline-block;
-    background-color: purple;
-    padding: 2px;
-    color: white;
-    border-radius: 9px;
-    width: 6%;
-    text-align: center;   
-    line-height: 22px;
-    font-size: 13px;
-}
-
-.False-check{
+li:before{
     width: 20px;
     height: 20px;
-    border: 1px solid red;
-    margin-top: 15px;
     border-radius: 50%;
+    padding: 2px;
+}
+
+.False-check::before{
+    border: 1px solid red;
     color: red;
-    line-height: middle;
-    display: inline-block;
-    line-height: 15px;  
+    content: "\2715";
 }
 
-.Recruiting{
-    display: inline-block;
-    background-color: rgb(100, 192, 169);
-    padding: 2px;
-    color: white;
-    border-radius: 9px;
-    width: 6%;
-    text-align: center;   
-    line-height: 22px;
-    font-size: 13px;
+.list-title h3::before{
+    content: '\25BC';
+    font-size: 14px;
 }
 
-.Mobile{
-    display: inline-block;
-    background-color: orange;
-    padding: 2px;
-    color: white;
-    border-radius: 9px;
-    width: 5%;
-    text-align: center;   
-    line-height: 22px;
-    font-size: 13px;
+.right-check::before{
+    content: "\2714";
+    border: 1px solid rgb(131, 207, 191);
+    color: rgb(131, 207, 191);
 }
 
-.Website{
+.right-check::after{
     display: inline-block;
-    background-color: rgb(207, 61, 146);
-    padding: 2px;
-    color: white;
+    padding: 0px 4px;
     border-radius: 9px;
-    width: 5%;
-    text-align: center;   
-    line-height: 22px;
     font-size: 13px;
+    margin: 5px;
 }
 
-.Sale{
+.False-check::after{
     display: inline-block;
-    background-color: rgb(138, 223, 41);
-    padding: 2px;
-    color: white;
+    padding: 0px 4px;
     border-radius: 9px;
-    width: 5%;
-    text-align: center;   
-    line-height: 22px;
     font-size: 13px;
+    margin: 5px;
+}
+
+.editorial::after{
+    background-color: rgb(71, 173, 241);
+    color: white;
+    content: "editorial";
+}
+
+.Q1-goals::after{
+    background-color: rgb(21, 224, 89);
+    color: white;
+    content: "Q1-goals";
+}
+
+.Recruiting::after{
+    background-color: rgb(219, 75, 31);
+    color: white;
+    content: "Recruiting";
+}
+
+.Mobile::after{
+    background-color: rgb(104, 24, 168);
+    color: white;
+    content: "Mobile";
+}
+
+.Website::after{
+    background-color: rgb(34, 149, 202);
+    color: white;
+    content: "Website";
+}
+
+.Sale::after{
+    background-color: yellow;
+    color: white;
+    content: "Sale";
 }
